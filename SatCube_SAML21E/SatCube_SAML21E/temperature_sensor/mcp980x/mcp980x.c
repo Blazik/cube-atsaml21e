@@ -15,7 +15,7 @@
 
 static const struct temperature_sensor_interface mcp980x_interface = {mcp980x_read, mcp980x_config};
 
-struct temperature_sensor *mcp980X_construct(struct temperature_sensor *const me, void *const io,const uint8_t resolution)
+struct temperature_sensor *mcp980X_construct(struct temperature_sensor *const me, void *const io, const uint8_t resolution)
 {
 	struct i2c_m_sync_desc *descr;
 	struct mcp980x *     mcp98 = (struct mcp980x *)me;

@@ -72,6 +72,10 @@ hpl\tc\hpl_tc.c
 
 hpl\wdt\hpl_wdt.c
 
+magnetic_sensor\lis2mdl\lis2mdl.c
+
+magnetic_sensor\magnetic_sensor.c
+
 main.c
 
 sleep_manager\sleep_manager.c

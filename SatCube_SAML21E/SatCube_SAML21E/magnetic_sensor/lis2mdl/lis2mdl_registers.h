@@ -1,0 +1,72 @@
+/*
+ * lis2mdl_registers.h
+ *
+ * Created: 11.02.2020 17:20:41
+ *  Author: Blazik
+ */ 
+
+
+#ifndef LIS2MDL_REGISTERS_H_
+#define LIS2MDL_REGISTERS_H_
+
+
+#ifndef LIS2MDL_REG_OFFSET_X_REG_L
+#define LIS2MDL_REG_OFFSET_X_REG_L 0x45
+#endif
+
+#ifndef LIS2MDL_REG_OFFSET_X_REG_H
+#define LIS2MDL_REG_OFFSET_X_REG_H 0x46
+#endif
+
+
+#ifndef LIS2MDL_REG_OFFSET_Y_REG_L
+#define LIS2MDL_REG_OFFSET_Y_REG_L 0x47
+#endif
+
+#ifndef LIS2MDL_REG_OFFSET_Y_REG_H
+#define LIS2MDL_REG_OFFSET_Y_REG_H 0x48
+#endif
+
+
+#ifndef LIS2MDL_REG_OFFSET_Z_REG_L
+#define LIS2MDL_REG_OFFSET_Z_REG_L 0x49
+#endif
+
+#ifndef LIS2MDL_REG_OFFSET_Z_REG_H
+#define LIS2MDL_REG_OFFSET_Z_REG_H 0x4a
+#endif
+
+
+#ifndef LIS2MDL_REG_WHO_AM_I
+#define LIS2MDL_REG_WHO_AM_I 0x4f
+#endif
+
+
+#ifndef LIS2MDL_REG_CFG_REG_A
+#define LIS2MDL_REG_CFG_REG_A 0x60
+#endif
+
+#ifndef LIS2MDL_REG_CFG_REG_B
+#define LIS2MDL_REG_CFG_REG_B 0x61
+#endif
+
+#ifndef LIS2MDL_REG_CFG_REG_C
+#define LIS2MDL_REG_CFG_REG_C 0x62
+#endif
+
+
+#ifndef LIS2MDL_REG_STATUS
+#define LIS2MDL_REG_STATUS 0x67
+#endif
+
+
+#ifndef LIS2MDL_REG_TEMP_OUT_L_REG
+#define LIS2MDL_REG_TEMP_OUT_L_REG 0x6e
+#endif
+
+#ifndef LIS2MDL_REG_TEMP_OUT_H_REG
+#define LIS2MDL_REG_TEMP_OUT_H_REG 0x6f
+#endif
+
+
+#endif /* LIS2MDL_REGISTERS_H_ */

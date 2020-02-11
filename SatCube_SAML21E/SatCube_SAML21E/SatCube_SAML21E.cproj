@@ -368,6 +368,8 @@
       <Value>../hri</Value>
       <Value>../sleep_manager</Value>
       <Value>%24(PackRepoDir)\atmel\SAML21_DFP\1.2.125\saml21b\include</Value>
+      <Value>../magnetic_sensor</Value>
+      <Value>../magnetic_sensor/lis2mdl</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
@@ -485,6 +487,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Config\hpl_wdt_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Config\lis2mdl_config.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Config\mcp980x_config.h">
@@ -886,6 +891,21 @@
     <Compile Include="hri\hri_wdt_l21.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="magnetic_sensor\lis2mdl\lis2mdl.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="magnetic_sensor\lis2mdl\lis2mdl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="magnetic_sensor\lis2mdl\lis2mdl_registers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="magnetic_sensor\magnetic_sensor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="magnetic_sensor\magnetic_sensor.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
@@ -947,6 +967,8 @@
     <Folder Include="hpl\tc\" />
     <Folder Include="hpl\wdt\" />
     <Folder Include="hri\" />
+    <Folder Include="magnetic_sensor" />
+    <Folder Include="magnetic_sensor\lis2mdl" />
     <Folder Include="sleep_manager\" />
     <Folder Include="temperature_sensor\" />
     <Folder Include="temperature_sensor\mcp980x\" />
