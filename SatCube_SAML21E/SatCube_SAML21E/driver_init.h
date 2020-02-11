@@ -26,7 +26,7 @@ extern "C" {
 
 #include <hal_i2c_s_async.h>
 
-#include <hal_i2c_m_async.h>
+#include <hal_i2c_m_sync.h>
 
 #include <hal_delay.h>
 #include <hal_timer.h>
@@ -41,7 +41,7 @@ extern struct usart_async_descriptor USART_0;
 
 extern struct i2c_s_async_descriptor I2C_IN;
 
-extern struct i2c_m_async_desc I2C_OUT;
+extern struct i2c_m_sync_desc I2C_OUT;
 
 extern struct timer_descriptor TIMER_0;
 
@@ -58,9 +58,9 @@ void I2C_IN_PORT_init(void);
 void I2C_IN_CLOCK_init(void);
 void I2C_IN_init(void);
 
-void I2C_OUT_PORT_init(void);
 void I2C_OUT_CLOCK_init(void);
 void I2C_OUT_init(void);
+void I2C_OUT_PORT_init(void);
 
 void delay_driver_init(void);
 

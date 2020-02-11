@@ -20,10 +20,10 @@
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
     <ProgFlashFromRam>true</ProgFlashFromRam>
-    <RamSnippetAddress />
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
     <UncachedRange />
     <preserveEEPROM>true</preserveEEPROM>
-    <OverrideVtorValue />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
     <BootSegment>2</BootSegment>
     <ResetRule>0</ResetRule>
     <eraseonlaunchrule>0</eraseonlaunchrule>
@@ -54,7 +54,7 @@
           <AcmeProjectActionInfo Action="File" Source="hal/include/hal_calendar.h" IsConfig="false" Hash="IOHRFf7MhZs7fuBZjRT+9Q" />
           <AcmeProjectActionInfo Action="File" Source="hal/include/hal_delay.h" IsConfig="false" Hash="snalDV+S1QGquCV38zAdoA" />
           <AcmeProjectActionInfo Action="File" Source="hal/include/hal_gpio.h" IsConfig="false" Hash="3mBEQ9Ix28YOArddDes83Q" />
-          <AcmeProjectActionInfo Action="File" Source="hal/include/hal_i2c_m_async.h" IsConfig="false" Hash="re2I6y1cdl1kJYhxBoBUTQ" />
+          <AcmeProjectActionInfo Action="File" Source="hal/include/hal_i2c_m_sync.h" IsConfig="false" Hash="wYjgBbVVd/11drj/bh4EaQ" />
           <AcmeProjectActionInfo Action="File" Source="hal/include/hal_i2c_s_async.h" IsConfig="false" Hash="JxkZSqQRoycsS3FljxvgrQ" />
           <AcmeProjectActionInfo Action="File" Source="hal/include/hal_init.h" IsConfig="false" Hash="OrYSVpF3YA5XrOBImWpdSg" />
           <AcmeProjectActionInfo Action="File" Source="hal/include/hal_io.h" IsConfig="false" Hash="XZRSabc39WU/0MFBLYGLvQ" />
@@ -80,7 +80,7 @@
           <AcmeProjectActionInfo Action="File" Source="hal/src/hal_atomic.c" IsConfig="false" Hash="jOsfB5ZnunjCPnUQXuXi9g" />
           <AcmeProjectActionInfo Action="File" Source="hal/src/hal_delay.c" IsConfig="false" Hash="vZ+YYOpHjTcAZaAaTE3Izg" />
           <AcmeProjectActionInfo Action="File" Source="hal/src/hal_gpio.c" IsConfig="false" Hash="wIzN9zQd1b8qd+RDoSkD7Q" />
-          <AcmeProjectActionInfo Action="File" Source="hal/src/hal_i2c_m_async.c" IsConfig="false" Hash="D7Skbh0K93T2IP0/tKY0oA" />
+          <AcmeProjectActionInfo Action="File" Source="hal/src/hal_i2c_m_sync.c" IsConfig="false" Hash="rXHlXpjvdMJ9o6yJQwR90g" />
           <AcmeProjectActionInfo Action="File" Source="hal/src/hal_i2c_s_async.c" IsConfig="false" Hash="nNG5HiP/8M9pxwvN3Y0khQ" />
           <AcmeProjectActionInfo Action="File" Source="hal/src/hal_init.c" IsConfig="false" Hash="bJvq8kpNbbOE2nZfChOGTQ" />
           <AcmeProjectActionInfo Action="File" Source="hal/src/hal_io.c" IsConfig="false" Hash="FYpavzYSxhFzVrBQtcH2ZA" />
@@ -138,11 +138,11 @@
           <AcmeProjectActionInfo Action="File" Source="sleep_manager/sleep_manager.c" IsConfig="false" Hash="Y0V7+lcjJKIdSeL4ueYZ6w" />
           <AcmeProjectActionInfo Action="File" Source="sleep_manager/sleep_manager.h" IsConfig="false" Hash="wbQ70QzJlJHL0fiCXAXTpQ" />
           <AcmeProjectActionInfo Action="File" Source="main.c" IsConfig="false" Hash="k0AH7j+BrmdFhBPzCCMptA" />
-          <AcmeProjectActionInfo Action="File" Source="driver_init.c" IsConfig="false" Hash="+o7Wu5cI1VBARq2UGF44zw" />
-          <AcmeProjectActionInfo Action="File" Source="driver_init.h" IsConfig="false" Hash="zCcuT9ZZILee9h2HRm3Pzg" />
-          <AcmeProjectActionInfo Action="File" Source="atmel_start_pins.h" IsConfig="false" Hash="YCW9KGOWR3Pln6ChI+F8TQ" />
+          <AcmeProjectActionInfo Action="File" Source="driver_init.c" IsConfig="false" Hash="cCn6/sHj2EpdRWt7EUT2Sw" />
+          <AcmeProjectActionInfo Action="File" Source="driver_init.h" IsConfig="false" Hash="bm6NgvqaqVFF9sdTvVnWzQ" />
+          <AcmeProjectActionInfo Action="File" Source="atmel_start_pins.h" IsConfig="false" Hash="npWS+j9AhHLDX+A84moCew" />
           <AcmeProjectActionInfo Action="File" Source="examples/driver_examples.h" IsConfig="false" Hash="/VOGQB9NDK2V8GMOltfp1w" />
-          <AcmeProjectActionInfo Action="File" Source="examples/driver_examples.c" IsConfig="false" Hash="jZYCVb014Q1glMbevACYog" />
+          <AcmeProjectActionInfo Action="File" Source="examples/driver_examples.c" IsConfig="false" Hash="YSEDE6VjDsXGwSJEqHbWqg" />
           <AcmeProjectActionInfo Action="File" Source="hal/include/hal_timer.h" IsConfig="false" Hash="5pZVthtMl40VMvofOld2ng" />
           <AcmeProjectActionInfo Action="File" Source="hal/include/hal_usart_async.h" IsConfig="false" Hash="km9RyrLcCSavva/oZ2rcOQ" />
           <AcmeProjectActionInfo Action="File" Source="hal/include/hpl_calendar.h" IsConfig="false" Hash="BydYrqFPbPNiZJO/Ir3uTQ" />
@@ -175,7 +175,7 @@
           <AcmeProjectActionInfo Action="File" Source="hpl/port/hpl_gpio_base.h" IsConfig="false" Hash="YuxzX7Tm9oKu1efgKHVe8g" />
           <AcmeProjectActionInfo Action="File" Source="hpl/rtc/hpl_rtc.c" IsConfig="false" Hash="OJcEQMS2B0k8G/+DI0p2Vg" />
           <AcmeProjectActionInfo Action="File" Source="hpl/rtc/hpl_rtc_base.h" IsConfig="false" Hash="6MZP9mg3QA6lytcm00LePQ" />
-          <AcmeProjectActionInfo Action="File" Source="hpl/sercom/hpl_sercom.c" IsConfig="false" Hash="pj7PQ0cTuZ4blTd/Tv6KSA" />
+          <AcmeProjectActionInfo Action="File" Source="hpl/sercom/hpl_sercom.c" IsConfig="false" Hash="ZO3dR57WOaXC3Bv/zc4qog" />
           <AcmeProjectActionInfo Action="File" Source="hpl/systick/hpl_systick.c" IsConfig="false" Hash="YYWQVH26EDBDzYTUwepAcA" />
           <AcmeProjectActionInfo Action="File" Source="hpl/tc/hpl_tc.c" IsConfig="false" Hash="oiVy6Kq2t4VTr/U+DHhPmQ" />
           <AcmeProjectActionInfo Action="File" Source="hpl/tc/hpl_tc_base.h" IsConfig="false" Hash="gjj5IyaZPy6sUReifzS1GQ" />
@@ -188,11 +188,11 @@
           <AcmeProjectActionInfo Action="File" Source="config/hpl_dmac_config.h" IsConfig="true" Hash="7aL46a4HpySQ8gZc8jgJ8w" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_gclk_config.h" IsConfig="true" Hash="K1aZWGEk1qN32nogwPz8HQ" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_mclk_config.h" IsConfig="true" Hash="ypj6b88E67yiUigfMMA65A" />
-          <AcmeProjectActionInfo Action="File" Source="config/hpl_osc32kctrl_config.h" IsConfig="true" Hash="iqQZK0xrq1Uw9SjdK+hIJQ" />
+          <AcmeProjectActionInfo Action="File" Source="config/hpl_osc32kctrl_config.h" IsConfig="true" Hash="VB4+yS61y/AgYtArtklIZA" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_oscctrl_config.h" IsConfig="true" Hash="kv9AwGFiTHKTYeyhGbqTqQ" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_port_config.h" IsConfig="true" Hash="RZW3kJE9DV2Pt1QsLR2RSQ" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_rtc_config.h" IsConfig="true" Hash="W4mM8RDYqlnO0oyykVIeeg" />
-          <AcmeProjectActionInfo Action="File" Source="config/hpl_sercom_config.h" IsConfig="true" Hash="NtwauV8TUhfx4QuTZ22l7g" />
+          <AcmeProjectActionInfo Action="File" Source="config/hpl_sercom_config.h" IsConfig="true" Hash="SLcYISYPX3NuNbYtKv16Cg" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_systick_config.h" IsConfig="true" Hash="tlT3lNDKWFe82MiGWfQzcA" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_tc_config.h" IsConfig="true" Hash="gtTPk5MZ1K1Hznh5kJ3LWg" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_wdt_config.h" IsConfig="true" Hash="t5Z68OqOeo9Kr6F3uT2GTQ" />
@@ -202,6 +202,22 @@
         <NonsecureFilesInfo />
       </AcmeProjectConfig>
     </AcmeProjectConfig>
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <avrtoolserialnumber>J41800111685</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x10810219</avrdeviceexpectedsignature>
+    <avrtoolinterface>SWD</avrtoolinterface>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>2000000</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800111685</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+    <avrtoolinterfaceclock>2000000</avrtoolinterfaceclock>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -329,6 +345,8 @@
   <armgcc.compiler.directories.IncludePaths>
     <ListValues>
       <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>../temperature_sensor</Value>
+      <Value>../temperature_sensor/mcp980x</Value>
       <Value>../Config</Value>
       <Value>../</Value>
       <Value>../examples</Value>
@@ -352,7 +370,6 @@
       <Value>%24(PackRepoDir)\atmel\SAML21_DFP\1.2.125\saml21b\include</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
-  <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
   <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
   <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
   <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
@@ -368,6 +385,7 @@
     </ListValues>
   </armgcc.linker.libraries.LibrarySearchPaths>
   <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.memorysettings.ExternalRAM />
   <armgcc.linker.miscellaneous.LinkerFlags>-Tsaml21e18b_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
   <armgcc.assembler.general.IncludePaths>
     <ListValues>
@@ -469,6 +487,9 @@
     <Compile Include="Config\hpl_wdt_config.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Config\mcp980x_config.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Config\peripheral_clk_config.h">
       <SubType>compile</SubType>
     </Compile>
@@ -508,7 +529,7 @@
     <Compile Include="hal\include\hal_gpio.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="hal\include\hal_i2c_m_async.h">
+    <Compile Include="hal\include\hal_i2c_m_sync.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="hal\include\hal_i2c_s_async.h">
@@ -631,7 +652,7 @@
     <Compile Include="hal\src\hal_gpio.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="hal\src\hal_i2c_m_async.c">
+    <Compile Include="hal\src\hal_i2c_m_sync.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="hal\src\hal_i2c_s_async.c">
@@ -880,6 +901,24 @@
     <Compile Include="sleep_manager_main.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="temperature_sensor\mcp980x\mcp980x.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="temperature_sensor\mcp980x\mcp980x.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="temperature_sensor\temperature_sensor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="temperature_sensor\temperature_sensor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="temperature_sensor_main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="temperature_sensor_main.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Config\" />
@@ -909,6 +948,8 @@
     <Folder Include="hpl\wdt\" />
     <Folder Include="hri\" />
     <Folder Include="sleep_manager\" />
+    <Folder Include="temperature_sensor\" />
+    <Folder Include="temperature_sensor\mcp980x\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Device_Startup\saml21e18b_flash.ld">
@@ -923,7 +964,7 @@
     <None Include="hal\documentation\calendar.rst">
       <SubType>compile</SubType>
     </None>
-    <None Include="hal\documentation\i2c_master_async.rst">
+    <None Include="hal\documentation\i2c_master_sync.rst">
       <SubType>compile</SubType>
     </None>
     <None Include="hal\documentation\i2c_slave_async.rst">

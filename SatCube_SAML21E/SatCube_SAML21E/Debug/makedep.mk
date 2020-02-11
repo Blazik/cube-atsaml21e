@@ -20,7 +20,7 @@ hal\src\hal_delay.c
 
 hal\src\hal_gpio.c
 
-hal\src\hal_i2c_m_async.c
+hal\src\hal_i2c_m_sync.c
 
 hal\src\hal_i2c_s_async.c
 
@@ -32,7 +32,7 @@ hal\src\hal_sleep.c
 
 hal\src\hal_timer.c
 
-hal\src\hal_usart_sync.c
+hal\src\hal_usart_async.c
 
 hal\src\hal_wdt.c
 
@@ -77,4 +77,10 @@ main.c
 sleep_manager\sleep_manager.c
 
 sleep_manager_main.c
+
+temperature_sensor\mcp980x\mcp980x.c
+
+temperature_sensor\temperature_sensor.c
+
+temperature_sensor_main.c
 

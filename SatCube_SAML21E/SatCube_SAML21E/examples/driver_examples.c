@@ -90,22 +90,14 @@ void I2C_IN_example(void)
 	i2c_s_async_enable(&I2C_IN);
 }
 
-static uint8_t I2C_OUT_example_str[12] = "Hello World!";
-
-void I2C_OUT_tx_complete(struct i2c_m_async_desc *const i2c)
-{
-}
-
 void I2C_OUT_example(void)
 {
 	struct io_descriptor *I2C_OUT_io;
 
-	i2c_m_async_get_io_descriptor(&I2C_OUT, &I2C_OUT_io);
-	i2c_m_async_enable(&I2C_OUT);
-	i2c_m_async_register_callback(&I2C_OUT, I2C_M_ASYNC_TX_COMPLETE, (FUNC_PTR)I2C_OUT_tx_complete);
-	i2c_m_async_set_slaveaddr(&I2C_OUT, 0x12, I2C_M_SEVEN);
-
-	io_write(I2C_OUT_io, I2C_OUT_example_str, 12);
+	i2c_m_sync_get_io_descriptor(&I2C_OUT, &I2C_OUT_io);
+	i2c_m_sync_enable(&I2C_OUT);
+	i2c_m_sync_set_slaveaddr(&I2C_OUT, 0x12, I2C_M_SEVEN);
+	io_write(I2C_OUT_io, (uint8_t *)"Hello World!", 12);
 }
 
 void delay_example(void)

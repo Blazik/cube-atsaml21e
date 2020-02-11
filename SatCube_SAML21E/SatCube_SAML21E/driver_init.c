@@ -24,7 +24,7 @@ struct calendar_descriptor CALENDAR_0;
 struct i2c_s_async_descriptor I2C_IN;
 uint8_t                       SERCOM1_i2c_s_buffer[SERCOM1_I2CS_BUFFER_SIZE];
 
-struct i2c_m_async_desc I2C_OUT;
+struct i2c_m_sync_desc I2C_OUT;
 
 struct wdt_descriptor WDT_0;
 
@@ -152,7 +152,7 @@ void I2C_OUT_CLOCK_init(void)
 void I2C_OUT_init(void)
 {
 	I2C_OUT_CLOCK_init();
-	i2c_m_async_init(&I2C_OUT, SERCOM2);
+	i2c_m_sync_init(&I2C_OUT, SERCOM2);
 	I2C_OUT_PORT_init();
 }
 
@@ -276,6 +276,34 @@ void system_init(void)
 	                       GPIO_PULL_OFF);
 
 	gpio_set_pin_function(MCU_2_STATUS_3, GPIO_PIN_FUNCTION_OFF);
+
+	// GPIO on PA14
+
+	gpio_set_pin_level(POWER_BLOCK_2,
+	                   // <y> Initial level
+	                   // <id> pad_initial_level
+	                   // <false"> Low
+	                   // <true"> High
+	                   false);
+
+	// Set pin direction to output
+	gpio_set_pin_direction(POWER_BLOCK_2, GPIO_DIRECTION_OUT);
+
+	gpio_set_pin_function(POWER_BLOCK_2, GPIO_PIN_FUNCTION_OFF);
+
+	// GPIO on PA15
+
+	gpio_set_pin_level(POWER_BLOCK_1,
+	                   // <y> Initial level
+	                   // <id> pad_initial_level
+	                   // <false"> Low
+	                   // <true"> High
+	                   false);
+
+	// Set pin direction to output
+	gpio_set_pin_direction(POWER_BLOCK_1, GPIO_DIRECTION_OUT);
+
+	gpio_set_pin_function(POWER_BLOCK_1, GPIO_PIN_FUNCTION_OFF);
 
 	// GPIO on PA18
 
