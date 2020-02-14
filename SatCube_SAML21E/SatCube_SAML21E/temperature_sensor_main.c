@@ -29,7 +29,7 @@ int8_t i2c_m_scan(struct i2c_m_sync_desc *const i2c, uint8_t *buffer){
 	
 	memset(buffer, 250, sizeof(buffer));
 	
-	while (address < 125)
+	while (true)
 	{
 		address++;
 		msg.addr = address;
@@ -44,6 +44,10 @@ int8_t i2c_m_scan(struct i2c_m_sync_desc *const i2c, uint8_t *buffer){
 			buffer[address_counter] = address;
 			address_counter++;
 		}
+		
+		if(address > 125){
+			address = 0;
+		}
 	}
 	
 	
@@ -51,18 +55,13 @@ int8_t i2c_m_scan(struct i2c_m_sync_desc *const i2c, uint8_t *buffer){
 }
 
 void read() {
-	gpio_set_pin_level(POWER_BLOCK_1, true);
-	gpio_set_pin_level(BLOCK_1_EN, true);
-	
-	
-	gpio_set_pin_level(POWER_BLOCK_2, true);
-	gpio_set_pin_level(BLOCK_2_EN, true);
-	
-	int buf[128];
-	i2c_m_scan(&I2C_OUT, &buf);
 
-	float x = temperature_sensor_read(TEMPERATURE_mcp980x);
-	delay_ms(1000);
+	
+ 	int buf[128];
+// 	i2c_m_scan(&I2C_OUT, &buf);
+ 
+ 	float x = temperature_sensor_read(TEMPERATURE_mcp980x);
+ 	delay_ms(1000);
 }
 
 /**
@@ -70,7 +69,7 @@ void read() {
  */
 void temperature_sensors_init(void)
 {
-	i2c_m_sync_enable(&I2C_OUT);
-	TEMPERATURE_mcp980x = mcp980X_construct(&TEMPERATURE_SENSOR_descr_mcp.parent, &I2C_OUT, CONF_MCP980X_SENSOR_RESOLUTION);
-	//read();
+ 	i2c_m_sync_enable(&I2C_OUT);
+ 	TEMPERATURE_mcp980x = mcp980X_construct(&TEMPERATURE_SENSOR_descr_mcp.parent, &I2C_OUT, CONF_MCP980X_SENSOR_RESOLUTION);
+	read();
 }

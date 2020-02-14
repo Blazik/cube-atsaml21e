@@ -17,7 +17,14 @@ int main(void)
 	
 	atmel_start_init();
 	
-	temperature_sensors_init();
+ 		gpio_set_pin_level(POWER_BLOCK_1, true);
+ 		gpio_set_pin_level(BLOCK_1_EN, true);
+		 
+ 	temperature_sensors_init();
+// 		
+// 		
+// 		gpio_set_pin_level(MCU_1_STATUS_1, true);
+// 		gpio_set_pin_level(BLOCK_2_EN, true);
 
 	while (1) {
 		

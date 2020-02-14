@@ -402,19 +402,19 @@ void system_init(void)
 	                   false);
 
 	// Set pin direction to output
-	gpio_set_pin_direction(MCU_3_EN, GPIO_DIRECTION_OUT);
-
-	gpio_set_pin_function(MCU_3_EN, GPIO_PIN_FUNCTION_OFF);
-
-	CALENDAR_0_init();
-	USART_0_init();
-
-	I2C_IN_init();
+// 	gpio_set_pin_direction(MCU_3_EN, GPIO_DIRECTION_OUT);
+// 
+// 	gpio_set_pin_function(MCU_3_EN, GPIO_PIN_FUNCTION_OFF);
+// 
+// 	CALENDAR_0_init();
+// 	USART_0_init();
+// 
+// 	I2C_IN_init();
 
 	I2C_OUT_init();
 
 	delay_driver_init();
 
-	TIMER_0_init();
-	WDT_0_init();
+// 	TIMER_0_init();
+// 	WDT_0_init();
 }
