@@ -1,0 +1,15 @@
+[Dd]ebug/
+[Rr]elease/
+
+*.o
+*.d
+*.eep
+*.elf
+*.hex
+*.map
+*.srec
+
+*.atsuo
+*.log
+
+.vs/
