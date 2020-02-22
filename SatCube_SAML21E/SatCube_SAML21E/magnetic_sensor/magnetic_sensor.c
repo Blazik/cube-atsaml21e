@@ -25,9 +25,9 @@ struct magnetic_sensor *magnetic_sensor_construct(
 /**
  * \brief Read from the given sensor
  */
-float magnetic_sensor_read(const struct magnetic_sensor *const me)
+float magnetic_sensor_read_temperature(const struct magnetic_sensor *const me)
 {
-	return me->interface->read(me);
+	return me->interface->read_temp(me);
 }
 
 /*

@@ -28,8 +28,9 @@ struct magnetic_sensor;
  * \brief Interface of abstract magnetic sensor
  */
 struct magnetic_sensor_interface {
-	float    (*read)(const struct magnetic_sensor *const me);
 	int16_t (*setup)(const struct magnetic_sensor *const me, struct magnetic_sensor_settings *mag_set);
+	
+	float   (*read_temp)(const struct magnetic_sensor *const me);
 };
 
 /**
@@ -50,9 +51,9 @@ struct magnetic_sensor *magnetic_sensor_construct(
 );
 
 /**
- * \brief Read from the given sensor
+ * \brief Read temperature from the given sensor
  */
-float magnetic_sensor_read(const struct magnetic_sensor *const me);
+float magnetic_sensor_read_temperature(const struct magnetic_sensor *const me);
 
 /*
  * \brief Setup magnetic sensor by setup struct 

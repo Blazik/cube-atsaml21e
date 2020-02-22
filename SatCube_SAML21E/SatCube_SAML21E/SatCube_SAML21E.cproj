@@ -891,6 +891,12 @@
     <Compile Include="hri\hri_wdt_l21.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="magnetic_sensor_main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="magnetic_sensor_main.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="magnetic_sensor\lis2mdl\lis2mdl.c">
       <SubType>compile</SubType>
     </Compile>

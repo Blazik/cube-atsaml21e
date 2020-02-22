@@ -14,6 +14,7 @@ extern "C" {
 #endif
 
 #include <magnetic_sensor.h>
+#include <lis2mdl_registers.h>
 
 const struct lis2mdl_settings {
 	// todo
@@ -26,7 +27,7 @@ struct lis2mdl {
 
 struct magnetic_sensor *lis2mdl_construct(struct magnetic_sensor *const me, void *const io);
 
-float lis2mdl_read(const struct magnetic_sensor *const me);
+float lis2mdl_read_temperature(const struct magnetic_sensor *const me);
 
 int16_t lis2mdl_config(const struct magnetic_sensor *const me, struct magnetic_sensor_settings *mag_set);
 
